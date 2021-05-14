@@ -1,0 +1,58 @@
+﻿@page
+@model CrownGlobal.Areas.Admin.Pages.Team.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>TeamMember</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="TeamMember.Id" />
+            <div class="form-group">
+                <label asp-for="TeamMember.RankId" class="control-label"></label>
+                <select asp-for="TeamMember.RankId" class="form-control" asp-items="ViewBag.RankId"></select>
+                <span asp-validation-for="TeamMember.RankId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeamMember.Name" class="control-label"></label>
+                <input asp-for="TeamMember.Name" class="form-control" />
+                <span asp-validation-for="TeamMember.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeamMember.Location" class="control-label"></label>
+                <input asp-for="TeamMember.Location" class="form-control" />
+                <span asp-validation-for="TeamMember.Location" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeamMember.Story" class="control-label"></label>
+                <textarea asp-for="TeamMember.Story" class="form-control" ></textarea>
+                <span asp-validation-for="TeamMember.Story" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Picture" class="control-label"></label>
+                <input asp-for="Picture" class="form-control" accept=".png, .jpg" />
+                <span asp-validation-for="Picture" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+    <div class="col-md-6">
+        <img />
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

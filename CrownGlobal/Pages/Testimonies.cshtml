@@ -1,0 +1,47 @@
+﻿@page
+@model CrownGlobal.Pages.TestimoniesModel
+@{
+}
+
+<main id="main">
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="portfolio">
+        <div class="container">
+
+            <div class="section-title" data-aos="zoom-out">
+                <h2>Testimonials</h2>
+                <p>Testimonies</p>
+            </div>
+
+            
+            <ul id="portfolio-flters" class="d-flex justify-content-end flex-wrap" data-aos="fade-up">
+                <li data-filter="*" class="filter-active">All</li>
+                @foreach (var item in Model.TestimonyGroup)
+                {
+                <li data-filter=".filter-@item.Replace(" ", "").Replace("/", "").Replace("-", "").Replace("'", "")">@item</li>
+                }
+            </ul>
+
+            <div class="row portfolio-container" data-aos="fade-up">
+                @foreach (var item in Model.Testimonies)
+                {
+                <div class="col-lg-4 col-md-6 portfolio-item filter-@item.TestimonyGroup.Replace(" ", "").Replace("/", "").Replace("-", "").Replace("'", "")">
+                    <div class="portfolio-img"><video src="@item.Video" controls="show" class="img-fluid" alt=""></video></div>
+                    <div class="portfolio-info">
+                        <h4>@item.Title</h4><p>@item.TestimonyGroup</p>
+                        <a href="@item.Video" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="@item.Title">
+                            <i class="bx bx-fullscreen"></i>
+                        </a>
+                        <a href="@item.Video" class="details-link" title="Download" download>
+                            <i class="bx bx-download"></i>
+                        </a>
+                    </div>
+                </div>
+                }
+
+            </div>
+
+        </div>
+    </section><!-- End Testimonials Section -->
+</main>

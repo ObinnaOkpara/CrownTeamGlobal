@@ -1,0 +1,43 @@
+﻿@page
+@model CrownGlobal.Pages.TeamMemberModel
+@{
+}
+<style>
+    pre {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+</style>
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team">
+        <div class="container">
+
+            <div class="section-title" data-aos="zoom-out">
+                <h2>Team</h2>
+                <p>Our Leaders</p>
+            </div>
+
+            <div class="row content" data-aos="fade-up">
+                <div class="col-lg-2 col-md-1"></div>
+                <div class="col-lg-8 col-md-10 pt-4 pt-lg-0 d-flex align-items-stretch">
+                    <div class="member" data-aos="fade-up">
+                        <div class="member-img text-center">
+                            <img src="/@Model.TeamMember.Image" class="img-fluid" alt="">
+                        </div>
+                        <div class="member-info">
+                            <h4>@Model.TeamMember.Name</h4> 
+                            <span><i class="bi bi-geo-alt"></i> @Model.TeamMember.Location</span>
+                            <span><b><i class="bi bi-bar-chart"></i> @Model.TeamMember.Rank.Name </b></span>
+                        </div>
+                        <div class="member-info">
+                            @Html.Raw(Model.TeamMember.Story.Replace("\n", "<br />"))
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Team Section -->

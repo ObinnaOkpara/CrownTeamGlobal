@@ -1,0 +1,44 @@
+﻿@page
+@model CrownGlobal.Pages.HowTosModel
+@{
+}
+
+<main id="main">
+
+    <!-- ======= How to Section ======= -->
+    <section id="howto" class="howto">
+        <div class="container">
+
+            <div class="section-title" data-aos="zoom-out">
+                <h2>How</h2>
+                <p>How To</p>
+            </div>
+            <style>
+                .howtofile {
+                    height: auto;
+                    width: auto;
+                    max-width: 100%;
+                    max-height: 250px;
+                }
+            </style>
+            <div class="row howtodiv">
+                @foreach(var howto in Model.HowTos){
+                    <div class="col-lg-4 col-md-6"> 
+                        <div class="w-100 shadow rounded p-3"> 
+                            <div class="text-center font-weight-bold my-2">
+                                @howto.Title <hr />
+                            </div>
+                            <div class="text-center">
+                                @if(howto.File.EndsWith("png") || howto.File.EndsWith("jpg") || howto.File.EndsWith("jpeg") ){
+                                    <img src="/@howto.File" class="howtofile">
+                                }else{
+                                    <video src="/@howto.File" controls="show" class="howtofile"></video>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section><!-- End How to Section -->
+</main>

@@ -1,0 +1,1039 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex flex-column justify-content-end align-items-center">
+    <div id="heroCarousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+            <div class="carousel-container">
+                <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Crown Team Global</span></h2>
+                <p class="animate__animated fanimate__adeInUp">
+                    We are a group of world changers, partnering with PURE (People United Reaching Everyone). 
+                    We are on a mission to spread the gift of PURE and help Africa and the world to achieve better health and better finances.
+                </p>
+                <p class="animate__animated fanimate__adeInUp">
+                    Click the video below to find out why we are so passionate about our PURE mission.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+        <defs>
+            <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+        </defs>
+        <g class="wave1">
+            <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)">
+        </g>
+        <g class="wave2">
+            <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)">
+        </g>
+        <g class="wave3">
+            <use xlink:href="#wave-path" x="50" y="9" fill="#fff">
+        </g>
+    </svg>
+</section><!-- End Hero -->
+
+<main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+        <div class="container">
+
+            <div class="section-title" data-aos="zoom-out">
+                <h2>About</h2>
+                <p>Our PURE Mission</p>
+            </div>
+
+            <div class="row content" data-aos="fade-up">
+                <div class="col-lg-2 col-md-1"></div>
+                <div class="col-lg-8 col-md-10 pt-4 pt-lg-0">
+                    <video src="video/mainvideo.mp4" controls="show" style="width:100%; height:auto;"></video>
+                    @*<a href="#" class="btn-learn-more">Learn More</a>*@
+                </div>
+            </div>
+            
+        </div>
+    </section><!-- End About Section -->
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+        <div class="container">
+
+            <div class="row" data-aos="zoom-out">
+                <div class="col-lg-9 text-center text-lg-start">
+                    <p>
+                        New IBO? Find out the system successful people in the business have used to grow their teams.
+                    </p>
+                </div>
+                <div class="col-lg-3 cta-btn-container text-center">
+                    <a class="cta-btn align-middle" asp-page="/NewIBO">Get Started Now!</a>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Cta Section -->
+    <!-- ======= About Section ======= -->
+    <section id="compensation">
+        <div class="container">
+
+            <div class="section-title" data-aos="zoom-out">
+                <h2>Compensation</h2>
+                <p>Compensation Plan</p>
+            </div>
+            
+            <div class="row content" data-aos="fade-up">
+                <div class="col-lg-6">
+                    <p>
+                        PURE has the best Compensation Plan in Africa and 10 different ways of rewarding you. Get to know the 10 ways, watch the video.
+                    </p>
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0">
+                    <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="nairaplan" data-bs-toggle="tab" data-bs-target="#naira" type="button" role="tab" aria-controls="home" aria-selected="true">in Naira</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="dollarplan" data-bs-toggle="tab" data-bs-target="#dollar" type="button" role="tab" aria-controls="profile" aria-selected="false">in Dollars</button>
+                      </li>
+                    </ul>
+
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="naira" role="tabpanel" aria-labelledby="nairaplan">
+                            <video src="video/CompPlanNaira.MP4" controls="show" style="width:100%; height:auto;"></video>
+                        </div>
+                        <div class="tab-pane fade" id="dollar" role="tabpanel" aria-labelledby="dollarplan">
+                            <video src="video/CompPlanDollars.MP4" controls="show" style="width:100%; height:auto;"></video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End About Section -->
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+        <div class="container">
+
+            <div class="section-title" data-aos="zoom-out">
+                <h2>Products</h2>
+                <p>Our Products  &nbsp; &nbsp; <a asp-page="/Products" style="font-size:15px">View All</a></p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <a href="/Products#cleanse">
+                        <div class="icon-box" data-aos="zoom-in-left">
+                            @*<div class="icon"><i class="bi bi-briefcase" style="color: #ff689b;"></i></div>*@
+                            <div class="icon">
+                                <img class="img-fluid" src="/assets/products/CleanseFlyer.JPG" style="width: 75px;">
+                            </div>
+                            <h4 class="title">Cleanse</h4>
+                            <p class="description">
+                                Natural DETOXIFICATION for the body; Cleanses the 7 elimination pathway: Liver, lungs, Blood, 
+                                Skin, Colons, Kidneys, Lymphatic System.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
+                    <a href="/Products#dailybuild">
+                        <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="100">
+                            <div class="icon">
+                                <img class="img-fluid" src="/assets/products/DailyBuildFlyer.jpg" style="width: 75px;">
+                            </div>
+                            <h4 class="title">Daily Build</h4>
+                            <p class="description">
+                                Daily build has over 240 of Nature's best ingredients in the right proportions. It is Non-GMO, 
+                                Gluten Free and All Natural.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mt-5 mt-lg-0 ">
+                    <a href="/Products#mila">
+                        <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="200">
+                            <div class="icon">
+                                <img class="img-fluid" src="/assets/products/MilaSmall.jpg" style="width: 75px;">
+                            </div>
+                            <h4 class="title">Mila</h4>
+                            <p class="description">
+                                Mila is a super food that is gluten free, trans-fat free, sugar free and is 
+                                superior source of protein and fiber.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mt-5">
+                    <a href="/Products#sulphur">
+                        <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="300">
+                            <div class="icon">
+                                <img class="img-fluid" src="/assets/products/organicsulphurflyer.jpg" style="width: 75px;">
+                            </div>
+                            <h4 class="title">Organic Sulphur</h4>
+                            <p class="description">
+                                It is a Naturally occuring dietary form of Sulphur, made from 99.9% pure distilled MSM sourced 
+                                from North America.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mt-5">
+                    <a href="/Products#purxcel">
+                        <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="400">
+                            <div class="icon">
+                                <img class="img-fluid" src="/assets/products/PurxcelFlyer.jpg" style="width: 75px;">
+                            </div>
+                            <h4 class="title">Purxcel</h4>
+                            <p class="description">
+                                A Tri-Active immune booster with three powerful Anti-Oxidants (GLUTATHIONE, SUPEROXIDE 
+                                DISMUTASE (SOD), ALOE ACEMANNAN).
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mt-5">
+                    <a href="/Products#goyin">
+                        <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="500">
+                            <div class="icon">
+                                <img class="img-fluid" src="/assets/products/GoyinFlyer.JPG" style="width: 75px;">
+                            </div>
+                            <h4 class="title">GOYIN</h4>
+                            <p class="description">
+                                Goyin contains a proprietary blend of superfruits, herbs and other fruits that have been 
+                                traditionally used to help bring them body into balance.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mt-5">
+                    <a href="/Products#sleeptrim">
+                        <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="300">
+                            <div class="icon">
+                                <img class="img-fluid" src="/assets/products/SleeptrimSmall.jpg" style="width: 75px;">
+                            </div>
+                            <h4 class="title">SleepTrim</h4>
+                            <p class="description">
+                                Experience a more restful night sleep naturally while supporting your body's ability to manage it's weight.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Services Section -->
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="portfolio">
+        <div class="container">
+
+            <div class="section-title" data-aos="zoom-out">
+                <h2>Testimonials</h2>
+                <p>Testimonies &nbsp; &nbsp; <a asp-page="/Testimonies" style="font-size:15px">View All</a></p> 
+            </div>
+
+
+            <ul id="portfolio-flters" class="d-flex justify-content-end flex-wrap" data-aos="fade-up">
+                <li data-filter="*" class="filter-active">All</li>
+                @foreach (var item in Model.TestimonyGroup)
+                {
+                <li data-filter=".filter-@item.Replace(" ", "").Replace("/", "").Replace("-", "").Replace("'", "")">@item</li>
+                }
+            </ul>
+
+            <div class="row portfolio-container" data-aos="fade-up">
+                @foreach (var item in Model.Testimonies)
+                {
+                <div class="col-lg-4 col-md-6 portfolio-item filter-@item.TestimonyGroup.Replace(" ", "").Replace("/", "").Replace("-", "").Replace("'", "")">
+                    <div class="portfolio-img"><video src="@item.Video" controls="show" class="img-fluid" alt=""></video></div>
+                    <div class="portfolio-info">
+                        <h4>@item.Title</h4><p>@item.TestimonyGroup</p>
+                        <a href="@item.Video" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="@item.Title">
+                            <i class="bx bx-fullscreen"></i>
+                        </a>
+                        <a href="@item.Video" class="details-link" title="Download" download>
+                            <i class="bx bx-download"></i>
+                        </a>
+                    </div>
+                </div>
+                }
+                
+            </div>
+
+        </div>
+    </section><!-- End Testimonials Section -->
+    <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+
+            <div class="section-title" data-aos="zoom-out">
+                <h2>Documents</h2>
+                <p>DOCUMENTS & FORMS</p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6 my-2">
+                    <div class="box" data-aos="zoom-in">
+                        <h3>Ghana</h3>
+                        <ul>
+                            <li><a href="Forms/Ghana/orderform.pdf" download>Order form</a></li>
+                            <li><a href="Forms/Ghana/PRICELIST.pdf" download>Price list</a></li>
+                            <li><a href="Forms/Ghana/PRESENTATION.pptx" download>Opportunity Presentation</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 my-2">
+                    <div class="box" data-aos="zoom-in">
+                        <h3>Nigeria</h3>
+                        <ul>
+                            <li><a href="Forms/Nigeria/orderform.pdf" download>Order form</a></li>
+                            <li><a href="Forms/Nigeria/Pricelist2021.pdf" download>Price list</a></li>
+                            <li><a href="Forms/Nigeria/CLEANSSLIDE.pptx" download>Opportunity Presentation</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 my-2">
+                    <div class="box" data-aos="zoom-in">
+                        <h3>Cameroon</h3>
+                        <ul>
+                            <li><a href="Forms/Cameroon/CameroonOrderForm.pdf" download>Order form</a></li>
+                            <li><a href="Forms/Cameroon/CameroonPriceList.pdf" download>Price list</a></li>
+                            <li><a href="Forms/Cameroon/OPPORTUNITY.pdf" download>Opportunity Presentation</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 my-2">
+                    <div class="box" data-aos="zoom-in">
+                        <h3>Kenya</h3>
+                        <ul>
+                            <li><a href="Forms/Kenya/KENYAORDERFORM.pdf" download>Order form</a></li>
+                            <li><a href="Forms/Kenya/KENYAPRICELIST.pdf" download>Price list</a></li>
+                            <li><a href="Forms/Kenya/KENYAPRESENTATION.pdf" download>Opportunity Presentation</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 my-2">
+                    <div class="box" data-aos="zoom-in">
+                        <h3>SA</h3>
+                        <ul>
+                            <li><a href="Forms/SouthAfrica/orderform_southafrica.pdf" download>Order form</a></li>
+                            <li><a href="Forms/SouthAfrica/SAPRICELIST.pdf" download>Price list</a></li>
+                            <li><a href="Forms/SouthAfrica/SAPresentation.pdf" download>Opportunity Presentation</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 my-2">
+                    <div class="box" data-aos="zoom-in">
+                        <h3>Uganda</h3>
+                        <ul>
+                            <li><a href="#">Order form</a></li>
+                            <li><a href="#">Price list</a></li>
+                            <li><a href="#">Opportunity Presentation</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 my-2">
+                    <div class="box" data-aos="zoom-in">
+                        <h3>Tanzania</h3>
+                        <ul>
+                            <li><a href="#">Order form</a></li>
+                            <li><a href="#">Price list</a></li>
+                            <li><a href="#">Opportunity Presentation</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 my-2">
+                    <div class="box" data-aos="zoom-in">
+                        <h3>Ivory coast</h3>
+                        <ul>
+                            <li><a href="#">Order form</a></li>
+                            <li><a href="#">Price list</a></li>
+                            <li><a href="#">Opportunity Presentation</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 my-2">
+                    <div class="box" data-aos="zoom-in">
+                        <h3>DR Congo</h3>
+                        <ul>
+                            <li><a href="#">Order form</a></li>
+                            <li><a href="#">Price list</a></li>
+                            <li><a href="#">Opportunity Presentation</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 my-2">
+                    <div class="box" data-aos="zoom-in">
+                        <h3>Other Files</h3>
+                        <ul>
+                            <li><a href="Forms/Others/AFRICAEXPANSIONPRESENTATION.pptx" download>Africa Business Expansion</a></li>
+                            <li><a href="Forms/Others/FrenchLivePurePresentation.pptx" download>French Live Pure Presentation</a></li>
+                            <li><a href="Forms/Others/REVIEWEDSTOCKISTUNIVERSITY.pdf" download>REVIEWED STOCKIST UNIVERSITY</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Pricing Section -->
+    <!-- ======= F.A.Q Section ======= -->
+    <section id="faq" class="faq">
+        <div class="container">
+
+            <div class="section-title" data-aos="zoom-out">
+                <h2>F.A.Q</h2>
+                <p>Questions IBOs Ask</p>
+            </div>
+
+            <ul class="faq-list">
+
+                <li>
+                    <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">How do I login to my back office (VBO)? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                    <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            You can login to your back office by visiting vbo.livepure.com.
+                        </p>
+                        <p>
+                            On the vbo.livepure.com log in page, type in your IBO Number in the “Username” field and type in the password that you created during enrollment.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">What markets are you operating in / where is PURE located? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                    <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            Great question! Here are our markets: <br />
+                            Untied States, Canada, Australia, New Zealand, Japan, Korea, Taiwan, Thailand, Nigeria, Ghana, Kenya and South Africa. 
+                            Soon to enter Tanzania, Uganda, DR Congo and Ivory Coast.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">What is the minimum age to become an IBO? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                    <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            An IBO must be 18 years of age in the state or jurisdiction in which they reside in order to be an IBO.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">What are the support emails / Contact Information? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                    <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+                        <h4>ORDER PROCESSING SUPPORT: </h4>
+                        <ul>
+                            <li>Peace: 08125684403</li>
+                            <li>Gloria: 08163653885</li>
+                            <li>Tinuola: 09076608891</li>
+                            <li>Evelyn: 08126360812</li>
+                            <li>Toyosi: 09013327400</li>
+                            <li>Jedidiah: 07089046083</li>
+                        </ul>
+                        <h4>STOCKIST SUPPORT LINES: </h4>
+                        <ul>
+                            <li>Promise: 08094900223</li>
+                            <li>Ose: 07019592019</li>
+                        </ul>
+                        <h4>STOCKIST EMAIL SUPPORT: </h4>
+                        <ul>
+                            <li>purestockist@livepure.com</li>
+                        </ul>
+                        <h4>SUPPORT EMAIL: </h4>
+                        <ul>
+                            <li>nigeria@livepure.com</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">Are your ingredients natural? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                    <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            PURE is committed to providing premium-quality products based on the best of science and nature. This philosophy includes the 
+                            avoidance of artificial dyes, colors, flavors, sweeteners and other potentially harmful ingredients. Ingredients PURE selects 
+                            for inclusion are natural, derived from natural sources, or made through natural processes. Our preference is to select natural 
+                            ingredients as much as we can.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq6" class="collapsed question">
+                        Are your products okay for pregnant women and nursing mothers? 
+                        <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+                    </div>
+                    <div id="faq6" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            Recommended use of our products during pregnancy and lactation is not supported.  Some herbs can pass through the placenta or 
+                            in breast milk to developing babies.  Some of the herbs used in the products have not been sufficiently studied to unequivocally 
+                            guarantee their safety during such critical phases of development and should be used with caution.  Please consult your 
+                            healthcare provider about appropriate supplements for pregnant and nursing women.
+                        </p>
+                    </div>
+                </li>
+                
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq7" class="collapsed question">
+                        Are your products pasteurized?
+                        <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+                    </div>
+                    <div id="faq7" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            Foodborne illness is often traced back to unpasteurized fruit or vegetable juices. Drinking bottled juices that are not 
+                            pasteurized can pose serious health risks, especially to young children and the elderly who have reduced immune capacity. 
+                            To protect the health of our customers, we use a process of UHT (ultra-high temperature) pasteurization. This process kills 
+                            disease-causing microorganisms as well as, or better than, traditional methods and results in significantly fewer nutrient 
+                            losses. UHT pasteurization heats juices to very high temperatures for only a few seconds, locking in flavor and better 
+                            preserving beneficial nutrients. This exceptionally quick heating process minimally effects the nutritional value and 
+                            taste of the juice while effectively destroying anything potentially harmful to the consumer.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq8" class="collapsed question">
+                        Do your products contain GMO ingredients?
+                        <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+                    </div>
+                    <div id="faq8" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            PURE is committed to providing premium-quality products based on the best of science and nature. This philosophy 
+                            includes the avoidance of artificial dyes, flavors, sweeteners and other potentially harmful ingredients. Most 
+                            ingredients PURE selects for inclusion are natural, derived from natural sources, or made through natural processes. 
+                            To the best of the company’s knowledge, its products do not contain genetically modified organisms (GMOs). PURE uses 
+                            an independent laboratory to validate the absence of GMOs.  The company is also updating its labels to include a non-GMO 
+                            logo to help our customers see our commitment to providing non-GMO products.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq9" class="collapsed question">
+                        Where do the raw ingredients for your products come from?
+                        <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+                    </div>
+                    <div id="faq9" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            We source raw materials from all over the world to get the highest quality ingredients for our products. For example, 
+                            acai can only be obtained from South and Central America, but predominantly from Brazil.  Goji is indigenous to China 
+                            and Noni is procured from the Polynesian Islands. All ingredients regardless of country of origin are tested for 
+                            identity, purity, and potency prior to inclusion into a PURE product. After the point of manufacture, every product 
+                            is tested for purity to help ensure they meet PURE’s high standard of quality.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq10" class="collapsed question">
+                        Can I use Mila with other food?
+                        <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+                    </div>
+                    <div id="faq10" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            Yes. As a versatile ingredient with a mild, nutty flavor, Mila can be incorporated into your favorite recipes. 
+                            Click here for our Cooking with Mila guide, as well as additional recipes. Use Mila on breakfast cereal, in yogurt, 
+                            over a salad, mixed with rice, in a smoothie, etc. You can also use Mila for baking. Simply divide the amount of butter 
+                            or oil in half, and then use the same amount of Mila (1 scoop Mila with 4 oz. water, soaked for 10 minutes) to replace it. 
+                            The food will bake and taste the same. Mila’s added fiber and omega-3s let you make bread, muffins, cookies, cakes, 
+                            pancakes and waffles healthier!
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq11" class="collapsed question">
+                        What are the benefits of eliminating toxins from the body?
+                        <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+                    </div>
+                    <div id="faq11" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            Benefits of detoxification include improved digestion, better bowel elimination, clearer thinking, improved mood and 
+                            emotional outlook, increased vitality, enhanced immunity, proper metabolism and nutritional support.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq12" class="collapsed question">
+                        How long do products last after their MFG date?
+                        <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+                    </div>
+                    <div id="faq12" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            In general, encapsulated products are best when consumed within 3 years from date of manufacture. Liquid Cleanse lasts 
+                            up to five years after date of manufacture. In most instances if a product has been properly stored and has not been 
+                            opened beyond the recommended date, it would okay to consume, but we cannot guarantee potency of the product beyond these 
+                            listed dates. Once opened, Superfruits should be refrigerated and consumed within 30 days. This is the furthest date we 
+                            still guarantee them to be safe and effective. CalciuMK+ and Daily Build liquid once opened consume within 30 days.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq13" class="collapsed question">
+                        Where are your products manufactured?
+                        <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+                    </div>
+                    <div id="faq13" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            All products by PURE are made by  manufacturers in USA. Current Good Manufacturing Practices (CGMPs) are guidelines that 
+                            provide a system of processes, procedures and documentation to assure a product has the identity, strength, composition, 
+                            quality and purity that appear on its label. These CGMP requirements are listed in American National Standard in the dietary 
+                            supplement industry developed in accordance with the FDA_ 21 CFR (Code of Federal Regulations) part 111. 
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq14" class="collapsed question">
+                        Are there any clinical trials on your products?
+                        <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+                    </div>
+                    <div id="faq14" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            One human trial comprised of 139 healthy-stressed and over-stressed individuals has been conducted using GoYin:
+                        </p>
+                        <ul>
+                            <li>GoYin – Effects of Traditional Asian Medicine (TAM) on Profile of Mood States (POMS)</li>
+                        </ul>
+                        <p>Purxcel also has a peer reviewed double blind placebo controlled human study showing 325% increase in Glutathione</p>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq15" class="collapsed question">
+                        What does being Active mean?
+                        <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+                    </div>
+                    <div id="faq15" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            An IBO who has ordered a minimum of 50 product volume (PV) or more is considered active. Active IBOs qualify to 
+                            earn all bonuses they are eligible to be paid e.g team bonus, generation bonus etc.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq16" class="collapsed question">
+                        What is a Binary Hybrid?
+                        <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+                    </div>
+                    <div id="faq16" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            The organizational structure of the Compensation Plan. New IBOs are introduced into the Company’s system with a 
+                            tree-like structure where each IBO of the organization has a left and right sub-tree. Volume flows up the tree 
+                            throughout each tree’s organizational structure.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq17" class="collapsed question">
+                        What is a Generation?
+                        <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+                    </div>
+                    <div id="faq17" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            Includes all the IBOs in the Sponsor Tree from yourself down to, and including, the next Silver 
+                            Director or above within each Sponsor Tree Leg.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq18" class="collapsed question">
+                        What is a Sponsor?
+                        <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+                    </div>
+                    <div id="faq18" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            An IBO who personally brings another IBO, Preferred Customer or Retail Customer into the company. 
+                            Any IBO standing as the Upline to other IBOs directly underneath it in the Sponsor Tree IBO downline organization.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq19" class="collapsed question">
+                        What is an Autoship?
+                        <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+                    </div>
+                    <div id="faq19" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            Placing orders on your account to stay active and eligible to earn all bonuses and commissions you qualify for.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq20" class="collapsed question">
+                        What is Carry-Over volume (CV)?
+                        <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+                    </div>
+                    <div id="faq20" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            Any volume accrued during a commission week that is NOT paid in team commissions will carry over into a new commission 
+                            week on the same leg in which it was accrued. Once that volume is paid out in team commissions, it will return to zero.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq21" class="collapsed question">
+                        What is Lesser Tree?
+                        <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+                    </div>
+                    <div id="faq21" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            Total commissionable volume of the lesser leg (see Team Bonus) for the weekly commission period.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq22" class="collapsed question">
+                        What is Product Volume (PV)?
+                        <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+                    </div>
+                    <div id="faq22" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            Volume consisting of the personal product purchases made by the IBO. An IBO is not paid commissions or bonuses on his 
+                            or her PV. PV is strictly used for personal qualification requirements within the Compensation Plan.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq23" class="collapsed question">
+                        What is the Binary Tree?
+                        <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+                    </div>
+                    <div id="faq23" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            An organization that allows only two front-line distributors – one is your left leg and one is your right leg. These 
+                            legs are often referred to as your lesser or stronger legs, depending on your building strategy.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq24" class="collapsed question">
+                        What is the PDR?
+                        <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+                    </div>
+                    <div id="faq24" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            Formerly known as the Physician’s Desk Reference, the Prescriber’s Digital Reference (PDR) is an exhaustive database of 
+                            detailed information on prescription medications and select nutritional supplements. This information is used by physicians 
+                            and other licensed medical professionals to better understand these products helping them to make informed decisions regarding 
+                            their use. Recognizing the need to keep up with rapidly expanding digital world, the PDR stopped publishing books in 2018 
+                            and now makes this information online at pdr.net and on their new mobilePDR® app.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq25" class="collapsed question">
+                        What are the PURE social media usernames?
+                        <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+                    </div>
+                    <div id="faq25" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            Here are our social handles (click to links below to take you to that page):
+                        </p>
+                        <p>Global</p>
+                        <ul>
+                            <li>Facebook: <a href="https://www.facebook.com/livepureglobal">@@livepureglobal</a></li>
+                            <li>Instagram: <a href="https://www.instagram.com/livepureglobal/">@@livepureglobal</a></li>
+                            <li>Twitter: <a href="https://twitter.com/livepureglobal">@@livepureglobal</a></li>
+                            <li>Pinterest: <a href="https://www.pinterest.com/livepureglobal">@@livepureglobal</a></li>
+                            <li>Youtube: <a href="https://www.youtube.com/user/GenesisPURECorp">@@livepureglobaltv</a></li>
+                            <li>LinkedIn: <a href="https://www.linkedin.com/company/people-united-reaching-everyone/">People United Reaching Everyone</a></li>
+                        </ul>
+                        <p>Africa</p>
+                        <ul>
+                            <li>Facebook: <a href="https://www.facebook.com/livepurenigeria">@@livepurenigeria</a></li>
+                            <li>Instagram: <a href="https://www.instagram.com/livepureng/">@@livepureng</a></li>
+                        </ul>
+
+
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+    </section><!-- End F.A.Q Section -->
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team">
+        <div class="container">
+
+            <div class="section-title" data-aos="zoom-out">
+                <h2>Team</h2>
+                <p>Our Leaders</p>
+            </div>
+
+            <div class="row teamdiv">
+
+                @*<div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                    <div class="member" data-aos="fade-up">
+                        <div class="member-img">
+                            <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+                            <div class="social">
+                                <a href=""><i class="bi bi-twitter"></i></a>
+                                <a href=""><i class="bi bi-facebook"></i></a>
+                                <a href=""><i class="bi bi-instagram"></i></a>
+                                <a href=""><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Walter White</h4>
+                            <span>Chief Executive Officer</span>
+                        </div>
+                    </div>
+                </div>*@
+
+            </div>
+
+        </div>
+    </section><!-- End Team Section -->
+    <!-- ======= How to Section ======= -->
+    <section id="howto" class="howto">
+        <div class="container">
+
+            <div class="section-title" data-aos="zoom-out">
+                <h2>How</h2>
+                <p>How To &nbsp; &nbsp; <a asp-page="/HowTos" style="font-size:15px">View All</a></p>
+            </div>
+            <style>
+                .howtofile {
+                    height: auto;
+                    width: auto;
+                    max-width: 100%;
+                    max-height: 250px;
+                }
+            </style>
+            <div class="row howtodiv">
+            </div>
+        </div>
+    </section><!-- End How to Section -->
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+        <div class="container">
+
+            <div class="section-title" data-aos="zoom-out">
+                <h2>Contact</h2>
+                <p>Contact PURE</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4" data-aos="fade-right">
+                    <div class="info">
+                        <div class="address">
+                            <i class="bi bi-geo-alt"></i>
+                            <h4>NIGERIA</h4>
+                            <p></p>
+                        </div>
+
+                        <div class="phone">
+                            <i class="bi bi-phone"></i>
+                            <h4>ORDER PROCESSING SUPPORT:</h4>
+                            <p>
+                                Peace: 08125684403 <br />
+                                Gloria: 08163653885 <br />
+                                Tinuola: 09076608891 <br />
+                                Evelyn: 08126360812 <br />
+                                Toyosi: 09013327400 <br />
+                                Jedidiah: 07089046083 <br />
+                            </p>
+                            <h4>STOCKIST SUPPORT LINES:</h4>
+                            <p>
+                                Promise: 08094900223 <br />
+                                Ose: 07019592019
+                            </p>
+                        </div>
+                        
+                        <div class="email">
+                            <i class="bi bi-envelope"></i>
+                            <h4>STOCKIST EMAIL SUPPORT:</h4>
+                            <p>
+                                purestockist@livepure.com
+                            </p>
+                            <h4>SUPPORT EMAIL:</h4>
+                            <p>
+                                nigeria@livepure.com
+                            </p>
+                        </div>
+                    </div>
+                </div>  
+
+                <div class="col-lg-4 mt-5 mt-lg-0" data-aos="fade-left">
+                    <div class="info">
+                        <div class="address">
+                            <i class="bi bi-geo-alt"></i>
+                            <h4>CAMEROON</h4>
+                            <p></p>
+                        </div>
+
+                        <div class="phone">
+                            <i class="bi bi-phone"></i>
+                            <h4>Order Processing lines:</h4>
+                            <p>
+                                Chi Nadege: 6 79 64 59 44
+                            </p>
+                            <h4>STOCKIST SUPPORT LINES:</h4>
+                            <p>
+                                Mokom Glynn: 6 79 35 96 77
+                            </p>
+                        </div>
+                   
+                        <div class="email">
+                            <i class="bi bi-envelope"></i>
+                            <h4>Commission Email support:</h4>
+                            <p>
+                                cameroon@livepure.com
+                            </p>
+                        </div>
+                        
+                        <div class="address">
+                            <i class="bi bi-geo-alt"></i>
+                            <h4>KENYA</h4>
+                            <p></p>
+                        </div>
+
+                        <div class="phone">
+                            <i class="bi bi-phone"></i>
+                            <h4>All Inquiries:</h4>
+                            <p>
+                                +254 741 188896 <br />
+                                +254 743 793575
+                            </p>
+                        </div>
+                   
+                        <div class="email">
+                            <i class="bi bi-envelope"></i>
+                            <h4>Email:</h4>
+                            <p>
+                                Kenya@livepure.com
+                            </p>
+                        </div>
+             
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-5 mt-lg-0" data-aos="fade-left">
+                    <div class="info">
+                        
+                        <div class="address">
+                            <i class="bi bi-geo-alt"></i>
+                            <h4>GHANA</h4>
+                            <p></p>
+                        </div>
+
+                        <div class="phone">
+                            <i class="bi bi-phone"></i>
+                            <h4>All Inquiries:</h4>
+                            <p>
+                                +233 0547319554 <br />
+                                +233 0270405639 <br />
+                                +233 0545272336
+                            </p>
+                        </div>
+                   
+                        <div class="email">
+                            <i class="bi bi-envelope"></i>
+                            <h4>Email:</h4>
+                            <p>
+                                Ghana@livepure.com
+                            </p>
+                        </div>
+             
+                        <div class="address">
+                            <i class="bi bi-geo-alt"></i>
+                            <h4>SOUTH AFRICA</h4>
+                            <p></p>
+                        </div>
+
+                        <div class="phone">
+                            <i class="bi bi-phone"></i>
+                            <h4>All Inquiries:</h4>
+                            <p>
+                                0786542173 <br />
+                                0814610333
+                            </p>
+                        </div>
+                   
+                        <div class="email">
+                            <i class="bi bi-envelope"></i>
+                            <h4>Email:</h4>
+                            <p>
+                                Southafrica@livepure.com
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Contact Section -->
+
+</main><!-- End #main -->
+
+<script>
+
+    $(document).ready(function () {
+        $.get("api/TeamMember", function(data){
+            var html = '';
+
+            for(var i = 0; i < data.length; i++) {
+                html += '<div class="col-lg-3 col-md-6 d-flex align-items-stretch"> <div class="member" data-aos="fade-up">' +
+                '<div class="member-img"><img src="/' + data[i].image + '" class="img-fluid" alt=""></div>' +
+                '<div class="member-info"><h4>' + data[i].name + '</h4><span><i class="bi bi-geo-alt"></i> ' + data[i].location + 
+                '</span><span><b><i class="bi bi-bar-chart"></i> ' + data[i].rankName + '</b></span> <a class="btn btn-outline-dark mt-2" href="TeamMember?id=' + data[i].id + '">Details</a>' +
+                '</div></div></div>';
+            }
+            $('.teamdiv').html(html);
+        });
+
+    
+        $.get("api/HowTo", function(data){
+
+            for(var i = 0; i < data.length; i++) {
+                var html = '<div class="col-lg-4 col-md-6"> <div class="w-100 shadow rounded p-3"> <div class="text-center font-weight-bold my-2">' +
+                         data[i].title + '<hr /></div><div id="howto' + i + '" class="text-center"></div></div></div>';
+
+                $('.howtodiv').append(html);
+
+                if(data[i].file.endsWith("png") || data[i].file.endsWith("jpg") || data[i].file.endsWith("jpeg") ){
+                    $('#howto' + i ).html('<img src="/' + data[i].file + '" class="howtofile">');
+                }
+                else{
+                    $('#howto' + i ).html('<video src="/' + data[i].file + '" controls="show"  class="howtofile"></video>');
+                }
+            }
+        });
+    });
+</script>

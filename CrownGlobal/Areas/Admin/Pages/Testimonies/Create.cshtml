@@ -1,0 +1,43 @@
+﻿@page
+@model CrownGlobal.Areas.Admin.Pages.Testimonies.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Testimony</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Testimony.Title" class="control-label"></label>
+                <input asp-for="Testimony.Title" class="form-control" />
+                <span asp-validation-for="Testimony.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Testimony.Video" class="control-label"></label>
+                <input asp-for="Video" class="form-control"  accept=".mp4, .avi, .mkv, .mov"/>
+                <span asp-validation-for="Video" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Testimony.TestimonyGroupId" class="control-label"></label>
+                <select asp-for="Testimony.TestimonyGroupId" class ="form-control" asp-items="ViewBag.TestimonyGroups"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,53 @@
+﻿@page
+@model CrownGlobal.Areas.Admin.Pages.Team.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>TeamMember</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TeamMember.Rank" class="control-label"></label>
+                <select asp-for="TeamMember.RankId" class ="form-control" asp-items="ViewBag.Ranks"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeamMember.Name" class="control-label"></label>
+                <input asp-for="TeamMember.Name" class="form-control" />
+                <span asp-validation-for="TeamMember.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeamMember.Location" class="control-label"></label>
+                <input asp-for="TeamMember.Location" class="form-control" />
+                <span asp-validation-for="TeamMember.Location" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeamMember.Story" class="control-label"></label>
+                <textarea asp-for="TeamMember.Story" class="form-control" ></textarea>
+                <span asp-validation-for="TeamMember.Story" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Picture" class="control-label"></label>
+                <input asp-for="Picture" class="form-control" accept=".png, .jpg, .jpeg" />
+                <span asp-validation-for="Picture" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
